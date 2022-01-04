@@ -4,7 +4,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <title>Teenlabs</title>
       <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="./css/style.css">
    </head>
@@ -120,16 +120,23 @@
                     <!-- DESCRIPTION -->
                     <div class="col-md-6" style="padding: 20px;">
                         <p>
-                        Ce formulaire vous permettra d'acquérir un badge correspondant à une compétence acquise pour chaque activité que vous avez pu accomplir, selon le domaine choisi.<br><br>
+                        <h5>Bienvenue sur l’espace des Open Badges, géré par TeenLabs !</h5>
+                        Nos Open Badges sont certifiés grâce au générateur Open Badge Factory, et créés à partir du DIGCOMP, le cadre de référence européen des compétences numériques.
+                        Ce formulaire vous permettra de découvrir les badges correspondants aux activités de chaque domaine de compétences.
 
-                        Un badge est une image numérique contenant l'enregistrement d'informations ou métadonnées telles que votre identité, celle de Teenlabs ( l'émetteur ), les critères d'attribution du badge ou encore les preuves justifiant son attribution. 
-                        C'est une déclaration numérique claire, vérifiable et infalsifiable, relatives à vos réalisations technologiques. Vous pourrez de ce fait prouver vos compétences à l'aide de badges qui certifient vos expériences et expertises dans les activités sélectionnées.<br><br>
+                        <h5>Qu’est-ce qu’un Open Badge ?</h5>
+                        Un badge est une image numérique contenant l'enregistrement d'informations, ou métadonnées, comme l’identité de l’organisme émetteur, les critères d'attribution ou encore les preuves justificatives. 
+                        C'est une déclaration numérique claire, vérifiable et infalsifiable, relative à vos réalisations.
 
-                        Ces badges permettent de valoriser officielement vos compétences et d'encourager votre développement personnel et professionnel. Ils vous permettent d'être plus crédible auprès d'organismes de formations, d'entreprises ou même de vos parents !<br><br>
+                        <h5>A quoi ça sert ?</h5>
+                        Vous pourrez prouver vos compétences à l'aide de badges qui certifient vos expériences et vos expertises ; renforcées par les organismes de formation et les personnes autour de vous qui vous reconnaissent.
 
+                        <h5>Comment ça marche ?</h5>
+                        Véritables valorisations des compétences, ces badges permettent de créditer vos efforts de découvertes et de formations, ainsi que vos expériences diverses. Devenez réellement crédibles en développant peu à peu votre galerie de badges personnalisée, en fonction de vos préférences. Vous pourrez ainsi créer votre 1er CV pour appuyer toutes vos demandes auprès d’écoles, d'entreprises ou même gagner en crédibilité auprès de vos parents 😉
 
-
-                        En remplissant ce formulaire, vous avez aussi la possibilité de nous envoyer une suggestion de badge qu'on analysera et développera si nécessaire.<br>
+                        <h5>Vous ne trouvez pas le Badge qui vous correspond ?</h5>
+                        Vous avez aussi la possibilité de nous envoyer une activité que vous avez réalisée ou un projet auquel vous avez participé : nous l’étudierons et il est possible que nous développions un badge correspondant pour vous et ensuite le proposer à l’ensemble de la communauté TeenLabs ! 
+<br>
                                             </p>
                      </div>
                     </div>
