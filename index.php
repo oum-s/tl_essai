@@ -55,7 +55,7 @@
                                         $hostname="localhost";
                                         $username="root";
                                         $password="";
-                                        $dbname="teenlab";
+                                        $dbname="teenlabs";
                                         $conn = mysqli_connect($hostname, $username, $password, $dbname); //Ouvre la connexion à la base
                                         /* change character set to utf8mb4 */
                                         printf("Initial character set: %s\n", $conn->character_set_name());
@@ -110,35 +110,84 @@
                                                 }
                                         }
                                         
-                                        mysqli_close($conn); //Refermer la connexion ouverte à la base
+
                                         ?>	
                                   </select>
                                </div>
                             </div>
                          </form>
+                         <img src="" alt="">
+                    
+                  <!-- AFFICHAGE BADGES -->
+                    <section class="affichage-badges">
+                     <div class="badges">
+                     <?php
+                                      $query = "SELECT DISTINCT domaines.id as dom_id, domaines.img as img FROM domaines INNER JOIN activites_domaines on activites_domaines.id_activite=domaines.id"
+                                      ;
+                              
+                              if(isset($_POST['domaines'])){
+                                  $query = $query . " WHERE domaines.id = " . $_POST['domaines'];
+                              }
+                              
+                              $result = $conn->query($query);
+                              
+                              if($result){
+                                      while($row = mysqli_fetch_array($result)){  
+                                    $id = $row["dom_id"];
+                                    $img = $row["img"];
+                                              echo "<td><img src= ".$img."></td>";
+                                      }
+                              }
+                              ?>	
+                     </div><br>
+                     <div class="description-badges">
+                     <?php
+                                      $query = "SELECT DISTINCT domaines.id as dom_id, domaines.descr as descr FROM domaines INNER JOIN activites_domaines on activites_domaines.id_activite=domaines.id"
+                                      ;
+                              
+                              if(isset($_POST['domaines'])){
+                                  $query = $query . " WHERE domaines.id = " . $_POST['domaines'];
+                              }
+                              
+                              $result = $conn->query($query);
+                              
+                              if($result){
+                                      while($row = mysqli_fetch_array($result)){  
+                                    $id = $row["dom_id"];
+                                    $descr = $row["descr"];
+                                              echo "<td><p>.$descr.</p></td>";
+                                      }
+                              }
+                              
+                              mysqli_close($conn); //Refermer la connexion ouverte à la base
+                              ?>	
+                     </div>
+                     </section>
                     </div>
+
                     <!-- DESCRIPTION -->
                     <div class="col-md-6" style="padding: 20px;">
                         <p>
-                        <h5>Bienvenue sur l’espace des Open Badges, géré par TeenLabs !</h5>
+                        <h3>Bienvenue sur l’espace des Open Badges, géré par TeenLabs !</h3>
                         Nos Open Badges sont certifiés grâce au générateur Open Badge Factory, et créés à partir du DIGCOMP, le cadre de référence européen des compétences numériques.
-                        Ce formulaire vous permettra de découvrir les badges correspondants aux activités de chaque domaine de compétences.
+                        Ce formulaire vous permettra de découvrir les badges correspondants aux activités de chaque domaine de compétences.<br>
 
-                        <h5>Qu’est-ce qu’un Open Badge ?</h5>
+                        <h3>Qu’est-ce qu’un Open Badge ?</h3>
                         Un badge est une image numérique contenant l'enregistrement d'informations, ou métadonnées, comme l’identité de l’organisme émetteur, les critères d'attribution ou encore les preuves justificatives. 
-                        C'est une déclaration numérique claire, vérifiable et infalsifiable, relative à vos réalisations.
+                        C'est une déclaration numérique claire, vérifiable et infalsifiable, relative à vos réalisations.<br>
 
-                        <h5>A quoi ça sert ?</h5>
-                        Vous pourrez prouver vos compétences à l'aide de badges qui certifient vos expériences et vos expertises ; renforcées par les organismes de formation et les personnes autour de vous qui vous reconnaissent.
+                        <h3>A quoi ça sert ?</h3>
+                        Vous pourrez prouver vos compétences à l'aide de badges qui certifient vos expériences et vos expertises ; renforcées par les organismes de formation et les personnes autour de vous qui vous reconnaissent.<br>
 
-                        <h5>Comment ça marche ?</h5>
-                        Véritables valorisations des compétences, ces badges permettent de créditer vos efforts de découvertes et de formations, ainsi que vos expériences diverses. Devenez réellement crédibles en développant peu à peu votre galerie de badges personnalisée, en fonction de vos préférences. Vous pourrez ainsi créer votre 1er CV pour appuyer toutes vos demandes auprès d’écoles, d'entreprises ou même gagner en crédibilité auprès de vos parents 😉
+                        <h3>Comment ça marche ?</h3>
+                        Véritables valorisations des compétences, ces badges permettent de créditer vos efforts de découvertes et de formations, ainsi que vos expériences diverses. Devenez réellement crédibles en développant peu à peu votre galerie de badges personnalisée, en fonction de vos préférences. Vous pourrez ainsi créer votre 1er CV pour appuyer toutes vos demandes auprès d’écoles, d'entreprises ou même gagner en crédibilité auprès de vos parents 😉<br>
 
-                        <h5>Vous ne trouvez pas le Badge qui vous correspond ?</h5>
+                        <h3>Vous ne trouvez pas le Badge qui vous correspond ?</h3>
                         Vous avez aussi la possibilité de nous envoyer une activité que vous avez réalisée ou un projet auquel vous avez participé : nous l’étudierons et il est possible que nous développions un badge correspondant pour vous et ensuite le proposer à l’ensemble de la communauté TeenLabs ! 
-<br>
-                                            </p>
+                                            </p><br>
                      </div>
+
+
                     </div>
                     </section>
                     </div>

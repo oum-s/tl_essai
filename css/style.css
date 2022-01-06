@@ -113,7 +113,7 @@ select{
 .col-md-6-first{
     padding: 20px;
      background-color: white;
-    width: 70%;
+    width: 50%;
 }
 h1 {
     text-align: center;
@@ -136,7 +136,9 @@ span{
     width: 30%;
     background-color: #f3f3fa;
 }
-
+.col-md-6 h3{
+    color: black;
+}
 p{
         display: block;
         align-items: center;
@@ -147,7 +149,31 @@ p{
         margin-inline-start: 0px;
         margin-inline-end: 0px;
 }
+/* AFFICHAGE BADGES */
+section .affichage-badges{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2em;
+}
+.badges{
+    width: 15em;
+    align-items: center;
+}
+.badges img{
+    max-width: 100%;
+    width: 400px;
+}
+.description-badges{
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    width: 15em;
+    align-items: center;
+
+}
 /* FIN CONTAINER */
+
 /* FOOTER */
 footer{
     background-color: #7500ff;
@@ -165,7 +191,7 @@ footer{
     display: flex;
     padding-left: 26%;
 }
-h4{
+h3{
     color: white;
     font-family: 'Poppins', sans-serif;
 }
